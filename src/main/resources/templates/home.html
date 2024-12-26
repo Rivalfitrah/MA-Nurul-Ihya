@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Nurul Ihya</title>
+    <!-- Link Bootstrap -->
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Link CSS -->
+    <link th:href="@{css/style.css}" rel="stylesheet">
+    <link th:href="@{css/footer.css}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap}" rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" th:src="@{https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js}"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logonurulihya.jpg" alt="logo">MA Nurul Ihya</a>
+        </div>
+        <div class="outline">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="/home">Beranda</a></li>
+            <li>
+                <a href="#">Profil<ion-icon name="chevron-down-outline"></ion-icon></a>
+                <ul class="submenu">
+                    <li><a href="/visimisi">Visi Misi</a></li>
+                    <li><a href="/sejarah">Sejarah</a></li>
+                    <li><a href="/galeri">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a href="/program-sekolah">Program Sekolah</a></li>
+            <li><a href="/ppdb">PPDB</a></li>
+            <li><a href="/prestasi">Prestasi</a></li>
+            <li><a href="/berita">Berita</a></li>
+        </ul>
+    </nav>
+    <!-- Slider Image -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img th:src="@{images/slide 1.jpg}" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img th:src="@{images/slide 2.jpg}" class="d-block w-100" alt="Slide 2">
+            </div>   
+            <div class="carousel-item" data-bs-interval="3000">
+                <img th:src="@{images/slide 3.jpg}" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- sambutan -->
+    <div class="isi">
+        <div>
+            <img th:src="@{/images/kplmadrasah.jpg}" alt="">
+            <div class="nama">
+                <p>Irfan Widia Rahmat, S.FIL</p> <!-- Tambahkan nama di bawah img -->
+            </div>
+        </div>
+        <div class="info">
+            <h1>Sambutan Kepala Madrasah</h1>
+            <p>Assalamualaikum Warahmatullahi Wabarakatuh. <br>
+            mari kita bersyukur atas petunjuk agama
+            Islam yang membawa kebahagiaan di dunia dan akhirat. Di MA Nurul Ihya, kami berkomitmen untuk melahirkan insan berkualitas, berakhlak, dan beriman, sesuai dengan hukum Allah. Sejak 2001, kami terus berupaya meningkatkan kualitas pendidikan dengan membangun konsep lembaga pendidikan Islam yang modern dan berkualitas global. Kami memohon dukungan dalam misi kami untuk membangun generasi unggul sebagai penerus agama dan bangsa. Semoga Allah SWT memberikan taufik dan hidayah-Nya kepada kita semua.<br>
+            Wassalamualaikum Warahmatullahi Wabarakatuh.</p>
+        </div>
+    </div>
+    <!-- profil guru -->
+    <div class="circle-container">
+        <h3 class="title"><b>Tenaga Pendidik</b></h3>
+        <div class="circle">
+            <img th:src="@{images/1.jpg}" alt="Kepala MA">
+            <p><b>Irfan Widia Rahmat, S.Fil.I</b></p>
+            <p>Kepala Madrasah</p>
+        </div>
+        <div class="circle">
+            <img th:src="@{images/2.jpg}" alt="Kepala Tata Usaha">
+            <p><b>Dayat Septian, S.Pd</b></p>
+            <p>Kepala Tata Usaha</p>
+        </div>
+        <div class="circle">
+            <img th:src="@{images/5.jpg}" alt="Wakil Kepala MA">
+            <p><b>Ahmad Rifa'i</b></p>
+            <p>Wakil Kepala Madrasah</p>
+        </div>
+        <div class="button-container">
+            <a href="/guru-guru"><button><b>Lihat Semua</b></button></a>
+        </div>
+    </div>
+    <!-- <div class="news">
+        <h2>Berita Terbaru</h2>
+        <div class="container">
+            <div class="article">
+                <img th:src="@{images/p1.jpg}" alt="Berita 1" href="Berita 1.htmlp">
+                <div class="content">
+                    <h3>Judul Berita Pertama</h3>
+                    <p class="date">10 Mei 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <a href="/berita" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </div>
+        <div class="article">
+            <img th:src="@{images/p2.jpg}" alt="Berita 2">
+            <div class="content">
+                <h3>Judul Berita Kedua</h3>
+                <p class="date">12 Mei 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="/berita" class="read-more">Baca Selengkapnya</a>
+            </div>
+        </div>
+            <div class="article">
+                <img th:src="@{images/p3.jpg}" alt="Berita 3">
+                <div class="content">
+                    <h3>Judul Berita Ketiga</h3>
+                    <p class="date">15 Mei 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <a th:href="@{/berita}" class="read-more">Baca Selengkapnya</a>
+                </div> -->
+            </div>
+        </di>
+    </div>
+
+    <div class="banner">
+        <img th:src="@{images/banner1.jpg}" alt="Banner">
+    </div>
+
+    <!-- Footer -->
+    <div class="hubungi-kami">
+        <div>
+            <h3>Hubungi Kami</h3>
+            <ul>
+                <li><ion-icon name="logo-instagram"></ion-icon> Instagram</li>
+                <li><ion-icon name="logo-facebook"></ion-icon> Facebook</li>
+                <li><ion-icon name="logo-twitter"></ion-icon> Twitter</li>
+                <li><ion-icon name="call-outline"></ion-icon> (0251)8628801</li>
+                <div class="admin-loginn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                    <a href="/login" class="adminbut">Admin</a>
+                </div>
+            </ul>
+        </div>
+        <div class="lokasi">
+            <h3>Lokasi</h3>
+            <p>Jl. Raya Dramaga Km 6.5 Gg. Pesantren RT.001/Rw.002 Kelurahan Margajaya, Kecamatan Bogor Barat, Kota Bogor 16116</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5843192883226!2d106.74137248885498!3d-6.574028599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c51ba4cfe2f1%3A0x6e53aee6a1430255!2sPondok%20Pesantren%20Nurul%20Ihya!5e0!3m2!1sid!2sid!4v1716371070432!5m2!1sid!2sid" width="550" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <footer class="minimalist-footer">
+        <p>&copy; 2024 Nurul Ihya Team. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

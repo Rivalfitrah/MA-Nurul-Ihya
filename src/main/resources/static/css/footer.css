@@ -1,0 +1,78 @@
+.hubungi-kami {
+    background-color: rgba(216, 214, 214, 0.979);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+.hubungi-kami > div {
+    flex: 1;
+}
+.hubungi-kami h3{
+    margin-left: 25px;
+    color:0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hubungi-kami li{
+    list-style: none;
+    margin-left: 25px;
+    color: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.lokasi {
+    text-align: right;
+}
+
+.lokasi iframe {
+    margin-right: 25px;
+}
+.lokasi h3{
+    margin-right: 73%;
+    color: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.lokasi p {
+    margin-right: 25px;
+    justify-content: right;
+    margin-left: 85px;
+    text-align: justify;
+    color: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 600px) { 
+    .hubungi-kami {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .lokasi {
+        margin-top: 20px; 
+        text-align: left; 
+    }
+
+    .lokasi iframe {
+        margin-right: 0; 
+        margin-left: 25px; 
+        width: 300px;
+    }
+
+    .lokasi h3,
+    .lokasi p {
+        margin-right: 25px; 
+        margin-left: 25px;
+        text-align: left;
+    }
+}
+.admin-loginn{
+    margin-top: 50px;
+    color: red;
+}
+.admin-loginn a{
+    color: red;
+}
+
+.adminbut {
+    color: rgba(0, 0, 0, 0.1);;
+}
+

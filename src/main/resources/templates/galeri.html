@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Nurul Ihya</title>
+    <!-- Link CSS -->
+    <link th:href="@{/css/galeri.css}" rel="stylesheet">
+    
+    
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap}" rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" th:src="@{https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js}"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logonurulihya.jpg" alt="logo">MA Nurul Ihya</a>
+        </div>
+        <div class="outline">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="/home">Beranda</a></li>
+            <li>
+                <a href="#">Profil<ion-icon name="chevron-down-outline"></ion-icon></a>
+                <ul class="submenu">
+                    <li><a href="/visimisi">Visi Misi</a></li>
+                    <li><a href="/sejarah">Sejarah</a></li>
+                    <li><a href="/galeri">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a href="/program-sekolah">Program Sekolah</a></li>
+            <li><a href="/ppdb">PPDB</a></li>
+            <li><a href="/prestasi">Prestasi</a></li>
+            <li><a href="/berita">Berita</a></li>
+        </ul>
+    </nav>
+
+    <div class="pic_container">
+        <div class="judul"><h1>Galeri</h1></div>
+        <div class="photo-gallery">
+            <!-- Mulai Dari sini kebawah adalah foto asli sekolahnya-->
+            <div th:each="galerii : ${galeriiList}">
+                <div class="card custom-card">
+                    <a target="_self" th:href="@{'/images/' + ${galerii.gambar}}">
+                        <img th:src="@{'/images/' + ${galerii.gambar}}" alt="..." />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="minimalist-footer" style="margin-top: 12%;">
+        <p>&copy; 2024 Nurul Ihya Team. All rights reserved.</p>
+    </footer>
+
+    <!-- script -->
+    <script th:src="@{https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js}"></script>
+    <script th:src="@{js/script.js}"></script>
+
+</body>
+</html>

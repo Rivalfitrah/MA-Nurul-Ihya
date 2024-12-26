@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/index2">Dashboard</a></li>
+                <li><a href="/create">Tambah berita</a></li>
+                <li><a href="/lomba">Daftar Prestasi</a></li>
+                <li><a href="/create_lomba">Tambah Prestasi</a></li>
+                <li><a href="/galerii">Daftar Galeri</a></li>
+                <li><a href="/create_galeri">Tambah Galeri</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <header class="navbar">
+                <div class="navbar-left">
+                    <h1>Admin Panel</h1>
+                </div>
+                <div class="navbar-right">
+                    <a href="/login" class="btn btn-danger">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/home" class="btn btn-success">Website</a>
+                </div>
+            </header>
+            <div class="content">
+                <table class="table table-bordered user-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="galerii : ${galerii}">
+                            <td>
+                                <img th:src="@{'/images/' + ${galerii.gambar}}" alt="..." width="100">
+                            </td>
+                            <td style="white-space: nowrap;">
+                                <a class="btn btn-danger btn-sm" th:href="@{/delete_galeri (id=${galerii.id})}" onclick="return confirm('Anda yakin ingin menghapus?')">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

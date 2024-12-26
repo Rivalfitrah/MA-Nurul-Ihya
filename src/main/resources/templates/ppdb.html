@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Nurul Ihya</title>
+    <!-- Link Bootstrap -->
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Link CSS -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/footer.css}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap}" rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" th:src="@{https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js}"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logonurulihya.jpg" alt="logo">MA Nurul Ihya</a>
+        </div>
+        <div class="outline">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a th:href="@{/home}">Beranda</a></li>
+            <li>
+                <a href="#">Profil<ion-icon name="chevron-down-outline"></ion-icon></a>
+                <ul class="submenu">
+                    <li><a th:href="@{/visimisi}">Visi Misi</a></li>
+                    <li><a th:href="@{/sejarah}">Sejarah</a></li>
+                    <li><a th:href="@{/galeri}">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a th:href="@{/program-sekolah}">Program Sekolah</a></li>
+            <li><a th:href="@{/ppdb}">PPDB</a></li>
+            <li><a th:href="@{/prestasi}">Prestasi</a></li>
+            <li><a href="/berita">Berita</a></li>
+        </ul>
+    </nav>
+
+    <div class="ppdb">
+        <h1>Brosur PPDB</h1>
+        <div class="brochure-container">
+            <a target="_self" th:href="@{/images/Brosur%20ppdb%20(1).jpg}"><img th:src="@{/images/Brosur%20ppdb%20(1).jpg}" alt="Brosur PPDB 1"></a>
+            <a target="_self" th:href="@{/images/Brosur%20ppdb%202.jpg}"><img th:src="@{/images/Brosur%20ppdb%202.jpg}" alt="Brosur PPDB 2"></a>
+        </div>
+    </div>
+
+    <div class="hubungi-kami">
+        <div>
+            <h3>Hubungi Kami</h3>
+            <ul>
+                <li><ion-icon name="logo-instagram"></ion-icon> Instagram</li>
+                <li><ion-icon name="logo-facebook"></ion-icon> Facebook</li>
+                <li><ion-icon name="logo-twitter"></ion-icon> Twitter</li>
+                <li><ion-icon name="call-outline"></ion-icon> (0251)8628801</li>
+                <div class="admin-loginn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                    <a href="/login" class="adminbut">Admin</a>
+                </div>
+            </ul>
+        </div>
+        <div class="lokasi">
+            <h3>Lokasi</h3>
+            <p>Jl. Raya Dramaga Km 6.5 Gg. Pesantren RT.001/Rw.002 Kelurahan Margajaya, Kecamatan Bogor Barat, Kota Bogor 16116</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5843192883226!2d106.74137248885498!3d-6.574028599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c51ba4cfe2f1%3A0x6e53aee6a1430255!2sPondok%20Pesantren%20Nurul%20Ihya!5e0!3m2!1sid!2sid!4v1716371070432!5m2!1sid!2sid" width="550" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer class="minimalist-footer">
+        <p>&copy; 2024 Den-Liner Team. All rights reserved.</p>
+    </footer>
+    
+    <!-- script -->
+    <script th:src="@{js/script.js}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script th:src="@{/script.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

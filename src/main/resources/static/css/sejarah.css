@@ -1,0 +1,212 @@
+/* css navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-color: #f5f5f5f8;;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+.logo img {
+    width: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.logo a {
+    color: #F1FFE7; /* Warna teks hijau */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav {
+    background-color: #058E3F; /* Gradien hijau ke biru */
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 01); /* Bayangan hitam transparan */
+}
+nav a {
+    color: black; /* Warna teks hitam */
+}
+.logo {
+    flex: 1;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #F1FFE7; /* Warna teks hitam */
+    font-weight: bold;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%; /* Pusat horizontal */
+    transform: translateX(-50%); /* Geser sejajar sumbu-x untuk memusatkan */
+    width: 0%;
+    height: 2px;
+    background-color: rgb(94, 94, 94);
+    transition: width 0.7s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0;
+}
+.submenu a{
+    color: #058E3F;
+}
+.menu li:hover .submenu {
+    display: block;
+}
+.menu .submenu li {
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+.menu a ion-icon {
+    margin-left: 5px;
+}
+.menu .submenu li:hover {
+    background-color: #c9c9c9; /* Warna hover gradien hijau ke biru */
+}
+.outline {
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        width: 100%;
+        text-align: left;
+    }
+    .outline {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
+/* ====================================================================================== */
+/* sejarah */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #006316; /* Warna latar belakang konten */
+    border-radius: 10px; /* Sudut melengkung untuk konten */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    margin-top: 70px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #00631500;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+    /* transisi */
+    transition: transform 1s ease;
+    transform: translateX(-100%);
+}
+.container.show {
+    transform: translateX(0);
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #058E3F;; /* Warna teks judul */
+}
+
+.content {
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black; /* Warna teks konten */
+}
+
+/* Responsif untuk mode ponsel */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+    .coontainer{
+        margin-top: 0;
+    }
+}
+
+/* ===================================================================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.minimalist-footer {
+    background-color: rgba(216, 214, 214, 0.979); /* Warna latar belakang */
+    text-align: center; /* Teks rata tengah */
+    padding: 20px; /* Ruang di sekitar teks */
+    width: 100%; /* Lebar penuh */
+    bottom: 0; /* Posisi di bawah */
+}
+
+.minimalist-footer p {
+    margin: 0; /* Menghilangkan margin default */
+    color: #333; /* Warna teks */
+}
+

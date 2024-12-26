@@ -1,0 +1,189 @@
+.body{
+    background-color: #f5f5f5f8;
+}
+
+/* css navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+.logo img {
+    width: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.logo a {
+    color: #F1FFE7; /* Warna teks hijau */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav {
+    background-color: #058E3F; /* Gradien hijau ke biru */
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 01); /* Bayangan hitam transparan */
+}
+nav a {
+    color: black; /* Warna teks hitam */
+}
+.logo {
+    flex: 1;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #F1FFE7; /* Warna teks hitam */
+    font-weight: bold;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%; /* Pusat horizontal */
+    transform: translateX(-50%); /* Geser sejajar sumbu-x untuk memusatkan */
+    width: 0%;
+    height: 2px;
+    background-color: rgb(94, 94, 94);
+    transition: width 0.7s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0;
+}
+
+.submenu a{
+    color: #058E3F;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+.menu .submenu li {
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+.menu a ion-icon {
+    margin-left: 5px;
+}
+.menu .submenu li:hover {
+    background-color: #c9c9c9;/* Warna hover gradien hijau ke biru */
+}
+.outline {
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        width: 100%;
+        text-align: left;
+    }
+    .outline {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+}
+/* ======================================================================================= */
+/* guru guru */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Mengatur jarak antar gambar agar rata */
+    margin-top: 80px;
+}
+
+.image-container {
+    width: calc(25% - 5px); /* Mengatur lebar gambar agar 4 gambar ditampilkan secara sejajar dan mengurangi jarak dari samping */
+    margin-bottom: 10px; /* Memberikan jarak antara baris gambar */
+    text-align: center;
+    padding: 0;
+}
+
+.image-container img {
+    width: 75%; /* Gunakan width 100% agar foto mengisi seluruh lebar container */
+    height: 75%;
+    border-radius: 10px;
+}
+
+.image-container p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+/* CSS untuk gambar pada mode layar ponsel */
+@media screen and (max-width: 600px) {
+    .image-container {
+        flex-basis: calc(100% - 20px); /* Satu gambar per baris, dikurangi margin */
+    }
+    .image-container img{
+        width: 50%;
+    }
+}
+
+/* Tentukan animasi slideInFromLeft */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%); /* Mulai dari posisi di luar layar sebelah kiri */
+    }
+    to {
+        transform: translateX(0); /* Akhir pada posisi awal (0) */
+    }
+}
+
+/* Terapkan animasi pada elemen */
+.image-container {
+    animation: slideInFromLeft 0.5s ease-in-out; /* Gunakan animasi slideInFromLeft dengan durasi 0.5 detik dan efek ease-in-out */
+}

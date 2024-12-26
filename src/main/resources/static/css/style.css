@@ -1,0 +1,700 @@
+/* css navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-color: #f5f5f5f8;;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+.logo img {
+    width: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.logo a {
+    color: #F1FFE7; /* Warna teks hijau */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav {
+    background-color: #058E3F; /* Gradien hijau ke biru */
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 01); /* Bayangan hitam transparan */
+}
+nav a {
+    color: black; /* Warna teks hitam */
+}
+.logo {
+    flex: 1;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #F1FFE7; /* Warna teks hitam */
+    font-weight: bold;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%; /* Pusat horizontal */
+    transform: translateX(-50%); /* Geser sejajar sumbu-x untuk memusatkan */
+    width: 0%;
+    height: 2px;
+    background-color: rgb(94, 94, 94);
+    transition: width 0.7s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0;
+}
+.submenu a{
+    color: #058E3F;
+}
+.menu li:hover .submenu {
+    display: block;
+}
+.menu .submenu li {
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+.menu a ion-icon {
+    margin-left: 5px;
+}
+.menu .submenu li:hover {
+    background-color: #c9c9c9; /* Warna hover gradien hijau ke biru */
+}
+.outline {
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        width: 100%;
+        text-align: left;
+    }
+    .outline {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+/* ===================================================================================== */
+/* SAMBUTAN */
+.isi {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Mengatur nama tetap sejajar dengan foto */
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.isi:hover {
+    transform: translateY(-5px); /* Geser ke atas saat dihover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bayangan lembut saat dihover */
+}
+
+.isi img {
+    padding-right: 20px;
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+    width: 200px; /* Lebar tetap untuk gambar */
+    height: 200px; /* Tinggi tetap untuk gambar */
+    object-fit: cover; /* Menjaga proporsi gambar dengan memotong jika perlu */
+}
+
+.isi .info {
+    text-align: left;
+    flex-grow: 1; /* Membuat bagian teks bisa tumbuh untuk mengisi ruang yang tersisa */
+}
+
+.isi h1 {
+    margin-left: 20px; /* Menggeser nama ke kiri */
+    color: #006316;
+    font-weight: bold;
+}
+.nama p{
+    font-weight: bold;
+    padding-top: 10px;
+}
+.info p {
+    margin-left: 20px;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .isi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .isi img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .isi p {
+        font-size: 14px;
+    }
+}
+
+/* ================================================================================ */
+/* PROFIL GURU*/
+.circle-container {
+    text-align: center;
+}
+.title {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    font-weight: bold;
+    color: #006316;
+}
+.circle {
+    display: inline-block;
+    margin: 0 10px;
+}
+.circle img {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.circle img:hover {
+    transform: scale(1.1);
+}
+.circle p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.button-container {
+    text-align: center;
+}
+.button-container button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #058E3F;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.button-container button:hover {
+    background-color: #036d2f;
+    color: rgb(207, 207, 207);
+}
+
+/* ================================================================================ */
+/* CSS BERITA */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 1rem 0;
+    max-width: 800px;
+    width: 100%;
+}
+
+.article img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 150px;
+    object-fit: cover;
+    width: 150px;
+}
+
+.content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.content p {
+    margin: 0;
+    color: #666;
+    flex-grow: 1;
+}
+
+.read-more {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .article {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+}
+/* ====================================================================================*/
+/* CSS PRESTASI */
+.judul {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #0476ef;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 160px; /* Atur tinggi yang konsisten */
+    object-fit: cover; /* Memastikan gambar mengisi area dengan proporsi yang benar */
+    object-position: center; /* Menjaga fokus pada bagian tengah gambar */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #f4f4f4; /* Warna latar belakang untuk mengisi area kosong */
+}
+
+
+.description {
+    text-align: center;
+}
+
+.description .nama {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0476ef;
+    margin-bottom: 0.5rem;
+}
+
+.description .juara {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.description .prestasi {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.success-message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: #28a745;
+}
+
+
+
+/* ====================================================================================*/
+/* CSS PROGRAM SEKOLAH */
+
+.semkolah{
+    margin-top: 50px;
+}
+
+.hider{
+    padding-top: 60px;
+}
+
+.pros{
+    padding: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+    
+}
+
+.picschool {
+    padding-top: 40px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 50px;
+}
+
+.fotobljr{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.fotobljr img {
+    width: 840px;
+    height: 700px;
+}
+
+.programskol{
+    background-color: #dae2e2fb;
+    padding: 20px;
+    align-content: center;
+}
+
+/* ===================================================================================== */
+/* BANNER */
+
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 510px;
+    display: block;
+    opacity: 0.7;
+    
+}
+
+/* ===================================================================================== */
+.ppdb {
+    text-align: center;
+    padding: 20px;
+}
+
+.ppdb h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 7%;
+    color: #4caf50;
+    font-weight: bold;
+    text-align: left;
+}
+
+.brochure-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brochure-container img {
+    max-width: 75%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.brochure-container img:hover {
+    transform: scale(1.05);
+}
+/* animasi transisi */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%); /* Mulai dari posisi di luar layar sebelah kiri */
+    }
+    to {
+        transform: translateX(0); /* Akhir pada posisi awal (0) */
+    }
+}
+
+.brochure-container img {
+    animation: slideInFromLeft 0.5s ease-in-out; /* Gunakan animasi slideInFromLeft dengan durasi 0.5 detik dan efek ease-in-out */
+}
+/* responsive hp */
+@media screen and (max-width: 600px) {
+    .ppdb h1{
+        margin-top: 15%;
+        padding-top: 5px;
+        font-weight: bold;
+        color: #058e3f;
+        text-align: left;
+    }
+}
+
+/* ====================================================================================== */
+/* FOOTER SELAIN DI HOMEPAGE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.minimalist-footer {
+    background-color: rgba(216, 214, 214, 0.979); /* Warna latar belakang */
+    text-align: center; /* Teks rata tengah */
+    padding: 20px; /* Ruang di sekitar teks */
+    width: 100%; /* Lebar penuh */
+    bottom: 0; /* Posisi di bawah */
+    border-top: 1px solid black;
+}
+
+.minimalist-footer p {
+    margin: 0; /* Menghilangkan margin default */
+    color: #333; /* Warna teks */
+}
+
+/* ====================================================================================== */
+/* mengatur tinggi slide image */
+.carousel-inner img {
+    height: 700px; /* Ganti dengan tinggi yang diinginkan */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+}
+
+
+/* ====================================================================================== */
+/* Berita */
+.news {
+    padding: 2rem;
+    text-align: center; /* Align text to the left */
+    justify-content: center;
+
+}
+
+.news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.news .container {
+    display: flex;
+    flex-direction: row; /* Stack articles horizontally */
+    align-items: stretch; /* Ensure articles stretch to the same height */
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow articles to wrap to the next line */
+}
+
+.news .article {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: calc(33.333% - 2rem); /* Ensure articles take up one third of the container width, accounting for the gap */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    display: flex;
+    flex-direction: column;
+}
+
+.news .article:hover {
+    transform: translateY(-10px);
+}
+
+.news .article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news .article .content {
+    padding: 1rem;
+    text-align: left;
+    flex: 1; /* Allow content to stretch to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the content and the button */
+}
+
+.news .article .content h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.news .article .content p {
+    font-size: 1rem;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease;
+    max-height: 4.5em; /* Adjust based on line height */
+}
+
+.news .article .content p.expanded {
+    max-height: none;
+    display: block;
+    -webkit-line-clamp: none;
+}
+
+.news .article .content .read-more-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+    align-self: flex-start; /* Align the button to the start */
+}
+
+.news .article .content .read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* ================================================================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.semkolah {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 6%;
+}
+
+.hider {
+    text-align: center;
+    color: #333;
+}
+
+.picschool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotobljr img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.programskol {
+    width: 100%;
+}
+
+.programskol h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.programskol ol {
+    padding-left: 20px;
+    list-style: decimal inside;
+    color: #333;
+}
+
+.programskol ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* =============================== Card Galeri ================================ */
+

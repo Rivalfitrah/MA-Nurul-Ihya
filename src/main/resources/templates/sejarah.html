@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Nurul Ihya</title>
+    <!-- Link Bootstrap -->
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Link CSS -->
+    <link th:href="@{/css/sejarah.css}" rel="stylesheet">
+    <link th:href="@{/css/footer.css}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap}" rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" th:src="@{https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js}"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logonurulihya.jpg" alt="logo">MA Nurul Ihya</a>
+        </div>
+        <div class="outline">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a th:href="@{/home}">Beranda</a></li>
+            <li>
+                <a href="#">Profil<ion-icon name="chevron-down-outline"></ion-icon></a>
+                <ul class="submenu">
+                    <li><a th:href="@{/visimisi}">Visi Misi</a></li>
+                    <li><a th:href="@{/sejarah}">Sejarah</a></li>
+                    <li><a th:href="@{/galeri}">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a th:href="@{/program-sekolah}">Program Sekolah</a></li>
+            <li><a th:href="@{/ppdb}">PPDB</a></li>
+            <li><a th:href="@{/prestasi}">Prestasi</a></li>
+            <li><a th:href="@{/berita}">Berita</a></li>
+        </ul>
+    </nav>
+    <!-- sejarah -->
+    <div class="container" id="container">
+        <h1>Sejarah Sekolah</h1>
+        <div class="content">
+            <p>Bermula berdirinya Yayasan  Nurul Ihya sebelum berdiri mulanya adalah Lembaga Pendidikan Pondok Pesantren yang dirintis sejak tahun 1983. Dimulai dengan jumlah santri sekitar 5 orang. Pertama kali pesantren ini, sebelum memiliki dan berubah menjadi yayasan, pesantren ini berdiri di Cicurug Kabupaten Sukabumi pada tahun 1983 yang didirikan oleh pasangan suami dan istri, K.H. Zaenudin dan Hj. Sumirat. Seiring dengan perkembangan zaman, jumlah santri dari tahun ke tahun mengalami peningkatan. Banyak kebutuhan infrastruktur dan suprasutruktur yang mesti dibenahi dengan baik.
+                Minimnya infra struktur ini, menyebabkan perjuangan pendiri pesantren Nurul Ihya tidak begitu saja menyerah. Pada tahun 1985 dengan jumlah santri sekitar 150 orang, pesantren Nurul Ihya pindah ke Bogor. Akan tetapi tempat yang disediakan hanya majlis ta’lim, sementara tidak ada asrama untuk menampung para santri.
+                Dengan rela dan ikhlas mereka bersedia tidur di hamparan majlis ta’lim tanpa beralaskan kasur sedikitpun. Keadaan ini berlangsung sekitar tiga tahun. Dalam tempo sekitar tiga tahun barulah terlihat sarana untuk para santri seperti kamar-kamar yang dipetak-petak untuk mereka bermukim meskipun dalam keadaan sederhana.
+                Sekian tahun para santri mengalami peningkatan, mencapai 200 orang terbagi dalam santri putra dan putri. Namun seiring dengan pendidikan di Indonesia, sekolah-sekolah pemerintah semakin merajai dan mendapat tempat di hati masyarakat. Para orang tua wali murid lebih meraih pesantren yang bermodus ganda, memiliki pesantren dan sekolah. Sehingga penurunan para santri mulai sedikit terlihat dari tahun ketahun.
+                Pesantren Nurul Ihya tetap mempertahankan posisinya sebagai lembaga pendidikan tradisional. Namun keadaan ini tidak relevan dengan perkembangan zaman, santri banyak memilih pesantren yang memadukan kajian keagamaan dengan sekolah umum. Akhirnya pesantren Nurul Ihya berusaha menyeimbangkan keinginan masyarakat dalam memadukan kajian keagamaan dalam pesantren dengan format sekolah umum. Pada Tahun 2001 keinginan tersebut barulah terwujud, di mana pesantren Nurul Ihya berubah format menjadi Yayasan yang berbasis Yayasan                  
+            </p>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="minimalist-footer">
+        <p>&copy; 2024 Nurul Ihya Team. All rights reserved.</p>
+    </footer>
+    
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script> 
+</body>
+</html>
